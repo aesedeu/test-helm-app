@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.containers.postgres.name }}
+  namespace: test
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.containers.postgres.name }}
+  replicas: {{ .Values.containers.postgres.replicas }}
+  revisionHistoryLimit: 3
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.containers.postgres.name }}
+    spec:
+      containers:
+      - name: {{ .Values.containers.postgres.name }}
+        image: {{ .Values.containers.postgres.image }}
+        ports:
+        - containerPort: {{ .Values.containers.postgres.container_port }}
