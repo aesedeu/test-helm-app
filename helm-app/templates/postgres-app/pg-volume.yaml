@@ -21,7 +21,7 @@ metadata:
   namespace: test
 spec:
   accessModes:
-    - ReadWriteOne
+    - ReadWriteOnce
   selector:
     matchLabels:
       type: vol1
