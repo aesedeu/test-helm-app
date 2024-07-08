@@ -12,6 +12,8 @@ spec:
     targetRevision: HEAD
     path: helm-charts
     helm:
+      valueFiles:
+      - values.yaml
       releaseName: aesedeu-application
 
   destination: 
