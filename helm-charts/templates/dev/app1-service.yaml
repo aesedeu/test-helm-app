@@ -4,7 +4,7 @@ metadata:
   name: myapp-service
 spec:
   selector:
-    app: {{ .Values.containers.apicontainer.name | quote }}
+    app: {{ .Values.containers.apicontainer.name }}
   ports:
   - port: {{ .Values.containers.apicontainer.app_port }}
     protocol: TCP
