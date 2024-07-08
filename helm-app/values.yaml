@@ -11,3 +11,4 @@ containers:
     container_port: 5432
     app_port: 5432
     replicas: 1
+    POSTGRES_USER: postgres
