@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.containers.apicontainer.name }}
+  namespace: test
 spec:
   selector:
     matchLabels:
