@@ -1,5 +1,5 @@
 containers:
-  api-container:
+  apicontainer:
     name: aes-app
     image: aesedeu/gitlab-app:latest
     container_port: 8000

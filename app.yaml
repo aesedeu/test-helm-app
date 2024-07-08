@@ -10,12 +10,11 @@ spec:
     chart: aesedeu-application
     repoURL: https://github.com/aesedeu/test-helm-app.git
     targetRevision: HEAD
-    path: helm-charts
+    path: aesedeu-application
     helm:
       valueFiles:
       - values.yaml
       releaseName: aesedeu-application
-
   destination: 
     server: https://kubernetes.default.svc
     namespace: test
