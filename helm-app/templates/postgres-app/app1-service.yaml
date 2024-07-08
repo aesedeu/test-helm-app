@@ -7,7 +7,7 @@ spec:
   selector:
     app: {{ .Values.containers.postgres.name }}
   ports:
-  - port: {{ .Values.containers.apicontainer.app_port }}
+  - port: {{ .Values.containers.postgres.app_port }}
     protocol: TCP
-    targetPort: {{ .Values.containers.apicontainer.container_port }}
+    targetPort: {{ .Values.containers.postgres.container_port }}
   
