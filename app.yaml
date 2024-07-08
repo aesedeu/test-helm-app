@@ -10,6 +10,7 @@ spec:
     chart: aesedeu-application
     repoURL: https://github.com/aesedeu/test-helm-app.git
     targetRevision: HEAD
+    path: /
     helm:
       releaseName: aesedeu-application
 
@@ -19,8 +20,10 @@ spec:
 
   syncPolicy:
     syncOptions:
+    - PruneLast=true
     - CreateNamespace=true
-
     automated:
       selfHeal: true
       prune: true
+    retry:
+      limit: 5
