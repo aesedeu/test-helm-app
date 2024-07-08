@@ -10,7 +10,7 @@ spec:
     chart: aesedeu-application
     repoURL: https://github.com/aesedeu/test-helm-app.git
     targetRevision: HEAD
-    path: /
+    path: helm-charts
     helm:
       releaseName: aesedeu-application
 
