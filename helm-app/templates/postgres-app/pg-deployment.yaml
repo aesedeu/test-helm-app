@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: {{ .Values.containers.postgres.name }}
   replicas: {{ .Values.containers.postgres.replicas }}
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 
   template:
     metadata:
       labels:
@@ -22,7 +22,7 @@ spec:
 
         env:
         - name: POSTGRES_USER
-        value: {{ .Values.containers.postgres.POSTGRES_USER }}
+          value: {{ .Values.containers.postgres.POSTGRES_USER }}
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
